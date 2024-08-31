@@ -4,9 +4,8 @@ package("flux")
     set_description("A C++20 library for sequence-orientated programming")
     set_license("BSL-1.0")
 
-    add_urls("https://github.com/tcbrindle/flux.git")
-    add_versions("2023.08.17", "8434e8e0fd131cebc3aed0d845530335bf7fb5e1")
-    add_versions("0.4.0", "43c09af5cc2e89e32b98ddc3507247f593ec2642")
+    add_urls("https://github.com/tcbrindle/flux/archive/v$(version).zip")
+    add_versions("0.4.0", "d17c656934688e085197eb6bd576a2e468d2b513c4f3be60121b8863c0830e13")
 
     on_install(function (package)
         os.cp("include", package:installdir())
