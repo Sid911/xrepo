@@ -29,6 +29,6 @@ package("argparse")
 
             return 0;
         }
-      ]]}, {configs = {languages = "c++17"}})
+      ]]}, {configs = {languages = "c++17"}}))
     end)
 
