@@ -11,7 +11,7 @@ package("argparse")
     os.cp("include", package:installdir())
   end)
 
-  on_test(function (package))
+  on_test(function (package)
     assert(package:check_cxxsnippets({test = [[
         #include "argparse/argparse.hpp"
         struct MyArgs : public argparse::Args {
@@ -31,3 +31,4 @@ package("argparse")
         }
       ]]}, {configs = {languages = "c++17"}})
     end)
+
