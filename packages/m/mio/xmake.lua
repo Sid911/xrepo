@@ -1,8 +1,8 @@
-package("flux")
+package("mio")
     set_kind("library", {headeronly = true})
-    set_homepage("https://tristanbrindle.com/flux/")
-    set_description("A C++20 library for sequence-orientated programming")
-    set_license("BSL-1.0")
+    set_homepage("https://github.com/vimpunk/mio")
+    set_description("An easy to use header-only cross-platform C++11 memory mapping library with an MIT license.")
+    set_license("MIT")
 
     add_urls("https://github.com/vimpunk/mio.git")
     add_configs("single_header", {description="Include single header instead file",default=false, type="boolean"})
