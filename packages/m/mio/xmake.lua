@@ -8,9 +8,9 @@ package("flux")
     add_configs("single_header", {description="Include single header instead file",default=false, type="boolean"})
 
     on_install(function (package)
-      if package:config("single_header")then
+      if package:config("single_header") then
         os.cp("single_include", package:installdir())
-      else then
+      else
         os.cp("include", package:installdir())
       end
     end)
@@ -20,7 +20,7 @@ package("flux")
         assert(package:check_cxxsnippets({test = [[
           #include <mio/mio.hpp>
         ]]}, {configs = {languages = "c++11"}}))
-      else then
+      else
         assert(package:check_cxxsnippets({test = [[
           #include <mio/mmap.hpp>
         ]]}, {configs = {languages = "c++11"}}))
